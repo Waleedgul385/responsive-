@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>Serendale</h3>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+                <div class="mobile-logo">
+                    <img src="Group 2.png" alt="">
+                </div>
+            </nav>
+            <div class="desktop-logo">
+                <img src="Group 2.png" alt="">
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="main">
+            <h1 class="fast">
+                <span class="gradient-text">A Fast Blockchain.</span><br>
+                <span class="white-text">Scalable AI.</span>
+            </h1>
+            <p class="description">Our technology performing fast blockchain (120K TPS) and it has guaranteed Al-based data security. Proof of Stake, its consensus algorithm enables unlimited speeds.</p>
+            <div class="button-group">
+                <a href="#" class="btn get-started">Get Started</a>
+                <a href="#" class="btn eco-system">Ecosystems</a>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="Group 4.png" alt="" class="background-img">
+            <img src="123Z_2101.w020.n001.946B.p15 1.png" alt="" class="overlay-img">
+        </div>
+    </div>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
